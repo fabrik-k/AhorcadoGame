@@ -14,7 +14,7 @@ public class Penjat {
             intents = Util.makeQuestion("Quans d'intents tenim");
         }
         tauler.inicialitzarPartida(paraula, Integer.parseInt(intents));
-        System.out.println(tauler.imprimir());
+/*        System.out.println(tauler.imprimir());
         while (!tauler.hasGuanyat() && tauler.getIntents() > 0){
             System.out.println(tauler.imprimirVides());
             String letra = Util.makeQuestion("Indica la lletra");
@@ -26,7 +26,7 @@ public class Penjat {
             System.out.println("Ho has encertat");
         }else{
             System.out.println("Has perdut");
-        }
+        }*/
     }
 
 }
