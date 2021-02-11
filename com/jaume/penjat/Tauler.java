@@ -1,29 +1,35 @@
 package com.jaume.penjat;
 
 public class Tauler {
-    private char[] paraulaSecreta;
-    private int intents;
+    private char[] ParaulaSecreta;
+    private Integer intents;
+    private boolean guanyat = false;
 
-    public void inicialitzarPartida(String paraula, Integer intents){
+    public void inicialitzarPartida(String paraula, int intents) {
         setParaulaSecreta(paraula.toCharArray());
         setIntents(intents);
 
     }
 
     public char[] getParaulaSecreta() {
-        return paraulaSecreta;
+        return ParaulaSecreta;
     }
 
     public void setParaulaSecreta(char[] paraulaSecreta) {
-        this.paraulaSecreta = paraulaSecreta;
+        ParaulaSecreta = paraulaSecreta;
     }
 
 
-    public int getIntents() {
+    public Integer getIntents() {
         return intents;
     }
 
-    public void setIntents(int intents) {
+    public void setIntents(Integer intents) {
         this.intents = intents;
     }
+
+    public boolean hasGuanyat(){
+        return guanyat;
+    }
+
 }
