@@ -1,21 +1,20 @@
 package com.jaume.penjat;
 
 public class Tauler {
-    private char[] ParaulaSecreta;
+    private char[] paraulaSecreta;
     private int intents;
 
     public void inicialitzarPartida(String paraula, int intents){
         setParaulaSecreta(paraula.toCharArray());
         setIntents(intents);
-
     }
 
     public char[] getParaulaSecreta() {
-        return ParaulaSecreta;
+        return paraulaSecreta;
     }
 
     public void setParaulaSecreta(char[] paraulaSecreta) {
-        ParaulaSecreta = paraulaSecreta;
+        this.paraulaSecreta = paraulaSecreta;
     }
 
 
