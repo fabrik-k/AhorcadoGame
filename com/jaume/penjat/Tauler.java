@@ -7,6 +7,7 @@ public class Tauler {
     public void inicialitzarPartida(String paraula, int intents){
         setParaulaSecreta(paraula.toCharArray());
         setIntents(intents);
+
     }
 
     public char[] getParaulaSecreta() {
