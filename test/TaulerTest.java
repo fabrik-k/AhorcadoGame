@@ -93,10 +93,10 @@ class TaulerTest {
         this.tauler.verificar("u");
         this.tauler.verificar("l");
         assertTrue(this.tauler.hasGuanyat());
-    }
+    }*/
 
     @Test
     void hasGuanyatFalse() {
         assertFalse(this.tauler.hasGuanyat());
-    }*/
+    }
 }

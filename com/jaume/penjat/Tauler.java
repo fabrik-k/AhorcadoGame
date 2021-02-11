@@ -3,6 +3,7 @@ package com.jaume.penjat;
 public class Tauler {
     private char[] ParaulaSecreta;
     private Integer intents;
+    private boolean guanyat = false;
 
     public void inicialitzarPartida(String paraula, int intents) {
         setParaulaSecreta(paraula.toCharArray());
@@ -25,6 +26,10 @@ public class Tauler {
 
     public void setIntents(Integer intents) {
         this.intents = intents;
+    }
+
+    public boolean hasGuanyat(){
+        return guanyat;
     }
 
 }
