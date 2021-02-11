@@ -16,10 +16,10 @@ class TaulerTest {
         this.tauler.inicialitzarPartida("paraula", 4);
     }
 
-    @Test
+/*    @Test
     void inicialitzarPartidaParaulaSecreta() {
         assertArrayEquals(new char[]{'p', 'a', 'r', 'a', 'u', 'l', 'a'}, this.tauler.getParaulaSecreta());
-    }
+    }*/
 /*
     @Test
     void inicialitzarPartidaNombreIntents() {
