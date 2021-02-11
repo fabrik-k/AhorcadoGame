@@ -2,9 +2,9 @@ package com.jaume.penjat;
 
 public class Tauler {
     private char[] ParaulaSecreta;
-    private int intents;
+    private Integer intents;
 
-    public void inicialitzarPartida(String paraula, int intents){
+    public void inicialitzarPartida(String paraula, int intents) {
         setParaulaSecreta(paraula.toCharArray());
         setIntents(intents);
 
@@ -19,11 +19,12 @@ public class Tauler {
     }
 
 
-    public int getIntents() {
+    public Integer getIntents() {
         return intents;
     }
 
-    public void setIntents(int intents) {
+    public void setIntents(Integer intents) {
         this.intents = intents;
     }
+
 }
