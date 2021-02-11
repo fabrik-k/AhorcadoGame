@@ -2,15 +2,14 @@ package com.jaume.penjat;
 
 public class Tauler {
     private char[] paraulaSecreta;
-    private int intents;
-
+    private Integer intents;
     private Integer totalIntents;
+    private boolean guanyador =false;
 
     public void inicialitzarPartida(String paraula, Integer intents){
         setParaulaSecreta(paraula.toCharArray());
         setIntents(intents);
         setTotalIntents(intents);
-
     }
 
     public String imprimirVides(){
@@ -20,6 +19,9 @@ public class Tauler {
         return "Et queda 1 vida de " + getTotalIntents();
     }
 
+    public boolean hasGuanyat(){
+        return guanyador;
+    }
 
 
     public char[] getParaulaSecreta() {
@@ -44,5 +46,12 @@ public class Tauler {
 
     public void setTotalIntents(Integer totalIntents) {
         this.totalIntents = totalIntents;
+    }
+    public boolean isGuanyador() {
+        return guanyador;
+    }
+
+    public void setGuanyador(boolean guanyador) {
+        this.guanyador = guanyador;
     }
 }
