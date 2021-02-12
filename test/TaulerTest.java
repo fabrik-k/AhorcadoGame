@@ -25,12 +25,12 @@ class TaulerTest {
     void inicialitzarPartidaNombreIntents() {
         assertEquals(4, this.tauler.getIntents());
     }
-/*
+
     @Test
     void verificarEntradaIncorrecte() {
         assertEquals("Lletra incorrecte",this.tauler.verificar("ll"));
     }
-
+/*
     @Test
     void verificarEntradaCorrecteEncertat() {
         this.tauler.verificar("a");
