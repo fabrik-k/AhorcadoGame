@@ -65,12 +65,13 @@ class TaulerTest {
     }
 
 
+*/
 
     @Test
     void imprimirVidesPlural() {
         assertEquals("Et queden 4 vides de 4", this.tauler.imprimirVides());
     }
-
+/*
     @Test
     void imprimirVidesSingular() {
         this.tauler.verificar("n");
@@ -93,10 +94,10 @@ class TaulerTest {
         this.tauler.verificar("u");
         this.tauler.verificar("l");
         assertTrue(this.tauler.hasGuanyat());
-    }*/
-
+    }
+*/
     @Test
     void hasGuanyatFalse() {
         assertFalse(this.tauler.hasGuanyat());
-    }*/
+    }
 }
