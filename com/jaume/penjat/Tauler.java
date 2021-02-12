@@ -4,25 +4,36 @@ public class Tauler {
     private char[] paraulaSecreta;
     private Integer intents;
     private Integer totalIntents;
-    private boolean guanyador = false;
+    private boolean guanyador;
     private String[] palabraEndevinada;
-    private String ver = null;
+    private String ver = "";
 
     public void inicialitzarPartida(String paraula, Integer intents) {
         setParaulaSecreta(paraula.toCharArray());
         setIntents(intents);
         setTotalIntents(intents);
         setPalabraEndevinada(paraula);
+        setGuanyador(false);
     }
 
     public String imprimirVides() {
         if (intents > 1) {
             return "Et queden " + intents + " vides de " + getTotalIntents();
+        } else {
+            return "Et queda 1 vida de " + getTotalIntents();
         }
-        return "Et queda 1 vida de " + getTotalIntents();
     }
 
     public boolean hasGuanyat() {
+        int counter = 0;
+        for (int i = 0; i < paraulaSecreta.length; i++) {
+            if (palabraEndevinada[i] != null) {
+                counter++;
+            }
+        }
+        if (counter == paraulaSecreta.length) {
+            guanyador = true;
+        }
         return guanyador;
     }
 
@@ -50,9 +61,6 @@ public class Tauler {
         this.totalIntents = totalIntents;
     }
 
-    public boolean isGuanyador() {
-        return guanyador;
-    }
 
     public void setGuanyador(boolean guanyador) {
         this.guanyador = guanyador;
@@ -65,18 +73,23 @@ public class Tauler {
     public void setPalabraEndevinada(String paraula) {
         palabraEndevinada = new String[paraula.length()];
         for (int i = 0; i < paraula.length(); i++) {
-            palabraEndevinada[i] = "_";
+            palabraEndevinada[i] = null;
         }
     }
 
     public String verificar(String letra) {
+        boolean acertado = false;
         if (letra.length() > 1) {
             ver = "Lletra incorrecte";
         } else {
             for (int i = 0; i < paraulaSecreta.length; i++) {
                 if (paraulaSecreta[i] == letra.charAt(0)) {
                     palabraEndevinada[i] = letra;
+                    acertado = true;
                 }
+            }
+            if (!acertado) {
+                intents--;
             }
         }
         return ver;

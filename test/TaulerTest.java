@@ -30,7 +30,7 @@ class TaulerTest {
     void verificarEntradaIncorrecte() {
         assertEquals("Lletra incorrecte",this.tauler.verificar("ll"));
     }
-/*
+
     @Test
     void verificarEntradaCorrecteEncertat() {
         this.tauler.verificar("a");
@@ -42,12 +42,12 @@ class TaulerTest {
         this.tauler.verificar("n");
         assertEquals(3,this.tauler.getIntents());
     }
-*/
+
     @Test
     void imprimirCapEncert() {
         assertEquals("_______", this.tauler.imprimir());
     }
-/*
+
     @Test
     void imprimirAmbLletres() {
         this.tauler.verificar("a");
@@ -64,14 +64,11 @@ class TaulerTest {
         assertEquals("paraula", this.tauler.imprimir());
     }
 
-
-*/
-
     @Test
     void imprimirVidesPlural() {
         assertEquals("Et queden 4 vides de 4", this.tauler.imprimirVides());
     }
-/*
+
     @Test
     void imprimirVidesSingular() {
         this.tauler.verificar("n");
@@ -95,7 +92,7 @@ class TaulerTest {
         this.tauler.verificar("l");
         assertTrue(this.tauler.hasGuanyat());
     }
-*/
+
     @Test
     void hasGuanyatFalse() {
         assertFalse(this.tauler.hasGuanyat());
