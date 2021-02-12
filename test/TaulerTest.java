@@ -42,12 +42,12 @@ class TaulerTest {
         this.tauler.verificar("n");
         assertEquals(3,this.tauler.getIntents());
     }
-
+*/
     @Test
     void imprimirCapEncert() {
         assertEquals("_______", this.tauler.imprimir());
     }
-
+/*
     @Test
     void imprimirAmbLletres() {
         this.tauler.verificar("a");

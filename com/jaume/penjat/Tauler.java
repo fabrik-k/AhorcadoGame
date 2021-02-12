@@ -8,11 +8,11 @@ public class Tauler {
     private String[] palabraEndevinada;
     private String ver = null;
 
-
     public void inicialitzarPartida(String paraula, Integer intents) {
         setParaulaSecreta(paraula.toCharArray());
         setIntents(intents);
         setTotalIntents(intents);
+        setPalabraEndevinada(paraula);
     }
 
     public String imprimirVides() {
@@ -22,7 +22,9 @@ public class Tauler {
         return "Et queda 1 vida de " + getTotalIntents();
     }
 
-    public boolean hasGuanyat() { return guanyador; }
+    public boolean hasGuanyat() {
+        return guanyador;
+    }
 
     public char[] getParaulaSecreta() {
         return paraulaSecreta;
@@ -48,17 +50,22 @@ public class Tauler {
         this.totalIntents = totalIntents;
     }
 
-    public boolean isGuanyador() { return guanyador; }
+    public boolean isGuanyador() {
+        return guanyador;
+    }
 
-    public void setGuanyador(boolean guanyador) { this.guanyador = guanyador; }
+    public void setGuanyador(boolean guanyador) {
+        this.guanyador = guanyador;
+    }
 
     public String[] getPalabraEndevinada() {
         return palabraEndevinada;
     }
 
-    public void setPalabraEndevinada() {
-        for (int i = 0; i < paraulaSecreta.length ; i++) {
-            this.palabraEndevinada[i] = "_";
+    public void setPalabraEndevinada(String paraula) {
+        palabraEndevinada = new String[paraula.length()];
+        for (int i = 0; i < paraula.length(); i++) {
+            palabraEndevinada[i] = "_";
         }
     }
 
@@ -73,5 +80,17 @@ public class Tauler {
             }
         }
         return ver;
+    }
+
+    public String imprimir() {
+        String current = "";
+        for (int i = 0; i < palabraEndevinada.length; i++) {
+            if (palabraEndevinada[i] == null) {
+                current = current + "_";
+            } else {
+                current = current + palabraEndevinada[i];
+            }
+        }
+        return current;
     }
 }
